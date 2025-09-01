@@ -11,7 +11,7 @@
   },
   "dependencies": {
     "@astrojs/react": "^3.6.0",
-    "@ndy-onl/astro-tina-core": "file:../astro-tina-core",
+    "@ndy-onl/astro-tina-core": "github:ndy-onl/astro-tina-core#main",
     "astro": "^4.11.5",
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
