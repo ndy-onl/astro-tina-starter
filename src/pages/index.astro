@@ -1,0 +1,18 @@
+---
+import { getGreeting } from '@ndy-onl/astro-tina-core';
+---
+
+<html lang="en">
+	<head>
+		<meta charset="utf-8" />
+		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+		<meta name="viewport" content="width=device-width" />
+		<meta name="generator" content={Astro.generator} />
+		<title>Astro Tina Starter</title>
+	</head>
+	<body>
+		<h1>Astro Tina Starter</h1>
+		<p>This is your starting point. Ready to build something amazing!</p>
+		<p><strong>Testing local package:</strong> {getGreeting()}</p>
+	</body>
+</html>
