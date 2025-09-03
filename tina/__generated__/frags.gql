@@ -1,0 +1,23 @@
+fragment PageParts on Page {
+  __typename
+  title
+  description
+  hero {
+    __typename
+    title
+    description
+    primary_button_label
+    secondary_button_label
+  }
+  features {
+    __typename
+    title
+    description
+  }
+  testimonial {
+    __typename
+    quote
+    author
+    handle
+  }
+}

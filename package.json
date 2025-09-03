@@ -6,7 +6,7 @@
     "node": ">=18.0.0"
   },
   "scripts": {
-    "dev": "HEAD=feat/foxi-theme-integration tina build && astro dev --host",
+    "dev": "tinacms dev -c \"astro dev\"",
     "start": "npm run dev",
     "build": "tina build && astro build",
     "preview": "astro preview",
@@ -31,13 +31,13 @@
     "react-dom": "^18.3.1",
     "sharp": "^0.33.4",
     "tailwindcss": "^3.4.4",
-    "tinacms": "^1.6.4",
-    "typescript": "^5.4.5",
-    "@tinacms/cli": "^1.5.45"
+    "tinacms": "^2.8.2",
+    "typescript": "^5.4.5"
   },
   "devDependencies": {
     "@astrojs/partytown": "^2.1.4",
-    "@tailwindcss/typography": "^0.5.13"
+    "@tailwindcss/typography": "^0.5.13",
+    "@tinacms/cli": "^1.10.2"
   },
   "packageManager": "yarn@1.22.22+sha512.a6b2f7906b721bba3d67d4aff083df04dad64c399707841b7acf00f6b133b7ac24255f2652fa22ae3534329dc6180534e98d17432037ff6fd140556e2bb3137e"
 }
