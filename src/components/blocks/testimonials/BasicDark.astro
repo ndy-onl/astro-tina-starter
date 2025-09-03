@@ -26,6 +26,8 @@ const {
 	bg,
 	bgPosition = 'center'
 } = Astro.props
+
+const { data } = Astro.props
 ---
 
 <Section
@@ -38,14 +40,15 @@ const {
 	<Row>
 		<Col span="12">
 			<Testimonial
-				blockquote={blockquote}
-				figcaption={figcaption}
-				cite={cite}
+				blockquote={data.quote}
+				figcaption={data.author}
+				cite={data.handle}
 				align="center"
 				size="4xl"
 				mobileSize="2xl"
 				classes="!leading-tight font-bold xl:text-5xl max-w-4xl mx-auto"
 				quoteSize={112}
+				data-tina-field="testimonial"
 			/>
 		</Col>
 	</Row>
