@@ -1,18 +1,22 @@
 ---
-import { getGreeting } from '@ndy-onl/astro-tina-core';
+import Layout from '../layouts/Layout.astro'
+import Hero from '../components/blocks/hero/HomeCTA.astro'
+import Features from '../components/blocks/features/FeatureCards.astro'
+import Testimonial from '../components/blocks/testimonials/BasicDark.astro'
+import HighlightBlocks from '../components/blocks/highlights/HightlightRows.astro'
+import CTA from '../components/blocks/CTA/BasicDark.astro'
+import client from '../../.tina/__generated__/client'
+
+// Content
+import testimonialBackground from '../assets/testimonial-bg-01.webp'
+
+const { data } = await client.queries.page({ relativePath: "home.mdx" });
 ---
 
-<html lang="en">
-	<head>
-		<meta charset="utf-8" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<meta name="viewport" content="width=device-width" />
-		<meta name="generator" content={Astro.generator} />
-		<title>Astro Tina Starter</title>
-	</head>
-	<body>
-		<h1>Astro Tina Starter</h1>
-		<p>This is your starting point. Ready to build something amazing!</p>
-		<p><strong>Testing local package:</strong> {getGreeting()}</p>
-	</body>
-</html>
+<Layout title={data.title} description={data.description}>
+	<Hero data={data.hero} />
+	<Features data={data.features} />
+	<Testimonial bg={testimonialBackground} bgPosition="right" data={data.testimonial} />
+	<HighlightBlocks />
+	<CTA />
+</Layout>
