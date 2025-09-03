@@ -6,9 +6,9 @@
     "node": ">=18.0.0"
   },
   "scripts": {
-    "dev": "HEAD=feat/foxi-theme-integration tinacms build && astro dev --host",
+    "dev": "HEAD=feat/foxi-theme-integration tina build && astro dev --host",
     "start": "npm run dev",
-    "build": "tinacms build && astro build",
+    "build": "tina build && astro build",
     "preview": "astro preview",
     "astro": "astro"
   },
