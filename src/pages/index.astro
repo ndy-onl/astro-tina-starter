@@ -11,6 +11,7 @@ import client from '../../.tina/__generated__/client'
 import testimonialBackground from '../assets/testimonial-bg-01.webp'
 
 const { data } = await client.queries.page({ relativePath: "home.mdx" });
+console.log("TinaCMS Data:", data);
 ---
 
 <Layout title={data.title} description={data.description}>
